@@ -57,6 +57,11 @@ class GradioLogger:
 
     @staticmethod
     def setup_logging() -> logging.Logger:
+        """Set up logging for the application.
+
+        Returns:
+            logging.Logger: The configured logger instance.
+        """
 
         formatter = GradioLogger.CustomFormatter()
 

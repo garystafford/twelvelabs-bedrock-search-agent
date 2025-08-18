@@ -17,8 +17,10 @@ class BasicLogging:
 
     @staticmethod
     def setup_logging() -> logging.Logger:
-        """
-        Sets the logging format and streams logs to stderr.
+        """Set up logging for the application.
+
+        Returns:
+            logging.Logger: The configured logger instance.
         """
         logging.basicConfig(
             level=logging.INFO,

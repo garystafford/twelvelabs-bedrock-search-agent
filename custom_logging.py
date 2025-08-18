@@ -59,8 +59,10 @@ class CustomLogging:
 
     @staticmethod
     def setup_logging() -> logging.Logger:
-        """
-        Sets the logging format and streams logs to stderr.
+        """Set up logging for the application.
+
+        Returns:
+            logging.Logger: The configured logger instance.
         """
         # Set up the log handler for application logs
         gradio_log_handler = GradioLogHandler(CustomLogging.get_log_queue())
