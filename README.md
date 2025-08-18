@@ -1,6 +1,6 @@
 # TwelveLabs Video Search Agent
 
-Demonstration of a Video Search Agent build with AWS Strands Agents, TwelveLabs on Amazon Bedrock, OpenSearch, and Gradio. See the YouTube video, [Video Search Agent with TwelveLabs on Bedrock, Stands Agents, OpenSearch, and Gradio](https://youtu.be/ax6g1Y-6szA) for complete details on the project.
+Demonstration of a Video Search Agent build with [AWS Strands Agents](https://strandsagents.com/latest/), [TwelveLabs on Amazon Bedrock](https://aws.amazon.com/bedrock/twelvelabs/), [OpenSearch](https://opensearch.org/), and [Gradio](https://www.gradio.app/). See my full-length YouTube video, [Video Search Agent with TwelveLabs on Bedrock, Stands Agents, OpenSearch, and Gradio](https://youtu.be/ax6g1Y-6szA), for complete details on the project.
 
 ![previews/gradio_app.png](previews/gradio_app_v2.png)
 
@@ -9,10 +9,10 @@ Demonstration of a Video Search Agent build with AWS Strands Agents, TwelveLabs 
 ### Prerequisites
 
 - Python 3.12+
-- AWS credentials
-- Amazon S3 bucket
+- AWS credentials (required for Bedrock and S3)
+- Amazon S3 bucket (holds embeddings)
 - Amazon OpenSearch Serverless collection (optional)
-- Docker (optional)
+- Docker (optional, alternative to Amazon OpenSearch)
 
 ### Installation
 
@@ -74,15 +74,15 @@ python -m pip install -r requirements.txt -Uq
 
 #### AWS Credentials
 
-Set AWS Credentials on the command line before continuing. These are required for access to Amazon Bedrock and Amazon S3.
+Set your AWS Credentials on the command line before continuing. These are required for access to Amazon Bedrock and Amazon S3.
 
 #### Start Application
 
 There are three different front-ends in this project:
 
-- **Terminal**: Simple terminal interface for testing
-- **Chat**: Conversation interface using Gradio
-- **Web App**: Conversation chatbot interface using Gradio
+- **Terminal**: Simple agentic terminal interface
+- **Chat**: Conversation agentic interface using Gradio
+- **Web App**: Conversation agentic chatbot interface using Gradio
 
 ```bash
 python terminal.py
@@ -94,7 +94,7 @@ Access either of the Gradio apps in your web browser: [http://127.0.0.1:7860](ht
 
 ## Alternative: Running OpenSearch in Docker
 
-As an alternative to AWS, you can run OpenSearch locally using Docker. This is intended for development environments only and is not secure.
+As an alternative to [Amazon OpenSearch](https://aws.amazon.com/opensearch-service/), you can run [OpenSearch](https://hub.docker.com/r/opensearchproject/opensearch) locally using Docker at no cost. This is intended for development environments only and is not secure.
 
 ```bash
 docker pull opensearchproject/opensearch:3.1.0
