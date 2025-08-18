@@ -2,6 +2,8 @@
 
 Demonstration of a Video Search Agent build with AWS Strands Agents, TwelveLabs on Amazon Bedrock, OpenSearch, and Gradio.
 
+![previews/gradio_app.png](previews/gradio_app_v2.png)
+
 ## Usage Instructions
 
 ### Prerequisites
