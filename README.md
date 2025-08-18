@@ -181,10 +181,12 @@ GET tv-commercials-index/_search
 
 ```text
 DEMO: Tools
+-----------
 Describe all of the tools you have available
 
 
-DEMO: Simple use case
+DEMO: Strands Agents Tools
+--------------------------
 What is the square root of the sum of the current year, month, and day?
 
 Divide your answer by the total amount of RAM in this machine, in GBs.
@@ -194,7 +196,8 @@ This is an Apple MacBook. Try again.
 Show your approach, including any commands you ran.
 
 
-DEMO: Simple prompts
+DEMO: Simple search prompts
+---------------------------
 Find commercials featuring superheroes
 
 Find commercials with a food theme
@@ -203,19 +206,21 @@ Find commercials with a food theme featuring singing
 
 
 DEMO: Soft drinks
-
+-----------------
 Find commercials that feature soft drinks and provide a ranked list of the top ten results based on the score. For each commercial, include the title, a summary, the specific soft drink product or products featured, the score as a percentage, and the duration of the commercial. Do not include non-soft drink products, such as alcoholic beverages or energy drinks.
 
 Exclude any results where the main product(s) being advertised are not soft drinks. At the end of your response, list any omitted titles along with a brief explanation for their exclusion.
 
 
 DEMO: Famous celebrities
+------------------------
 Search for commercials featuring well-known celebrities from Hollywood, sports, or music, and return a list of videos that meet these criteria. For each video, include the title, the name(s) of the celebrity or celebrities appearing, a description of their activities in the commercial, and the product or service being advertised. Only include commercials for which the specific name of at least one celebrity featured in the commercial is known. Exclude any commercials where you cannot identify at least one celebrity by name.
 
 Eliminate any results that feature non-human celebrities, such as cartoon characters.
 
 
-DEMO: Car Buyer
+DEMO: Car buyers
+----------------
 Search for commercials produced by automobile manufacturers. Provide a numbered list of five commercials, including the title of each commercial, its duration, and a concise one-sentence summary describing its content.
 
 Provide a detailed summary of the third commercial in the list, including a description of its visual elements, any notable textual content or on-screen captions, and the audio features such as music, sound effects, or voiceovers that contribute to the overall impact of the advertisement.
@@ -225,11 +230,13 @@ Identify the target audience for this commercial by specifying the demographic o
 Locate other commercials that target a similar consumer segment as this one. These commercials may promote any type of product or service. For each example, explain specifically how it appeals to the same buyer demographic, highlighting aspects such as shared interests, lifestyle attributes, or consumer behaviors that connect them to the original audience.
 
 
-DEMO: Keyword search example
+DEMO: Keyword search
+--------------------
 Find all videos that include the keywords "family" or "adventure." Return a bulleted list of each video, displaying the title, duration, and the relevant keywords associated with it.
 
 
-DEMO: Video segment search example
+DEMO: Video segment search
+--------------------------
 Search for segments within commercials that show exotic vacation locations, such as tropical beaches. Provide a bulleted list of the top five results ranked by score. For each segment, include the title, location if known, description of the segment, score converted to a percentage, and the start and end times of the segment.
 
 What is the total duration of all five segments in minutes and seconds?
@@ -237,11 +244,13 @@ What is the total duration of all five segments in minutes and seconds?
 What is the average score of all five segments as a percentage?
 
 
-DEMO: Write new tools
+DEMO: Write new tool
+--------------------
 Write a Python method using the opensearch-py package to get the count of documents in the OpenSearch index. Accept the OpenSearch client as an input parameter to the method.
 
 
-OTHER:
+OTHER EXAMPLES
+--------------
 Please search for commercials that feature people driving in cars and provide a numbered list of the titles and durations in seconds, formatted as: '1. Title (duration).' List only the title and duration for each commercial, presented in the specified format without any markdown or additional formatting.
 
 Tell me more about commercial #1.
