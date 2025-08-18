@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwelveLabs Video Search Agent - File Relationships</title>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .chart-container {
+            text-align: center;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .legend h3 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .legend-item {
+            margin: 10px 0;
+            padding: 5px 0;
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border: 1px solid #ccc;
+        }
+
+        .main-app {
+            background-color: #ff6b6b;
+        }
+
+        .agents {
+            background-color: #4ecdc4;
+        }
+
+        .tools {
+            background-color: #45b7d1;
+        }
+
+        .data {
+            background-color: #96ceb4;
+        }
+
+        .logging {
+            background-color: #feca57;
+        }
+
+        .config {
+            background-color: #fd79a8;
+        }
+
+        .development {
+            background-color: #e17055;
+        }
+
+        .external {
+            background-color: #a29bfe;
+        }
+
+        .documentation {
+            background-color: #00b894;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>TwelveLabs Video Search Agent - File Relationships</h1>
+
+        <div class="chart-container">
+            <div class="mermaid">
+                graph TD
+                %% User Interfaces
+                app[app_chat.py<br />Gradio-based Chatbot UI]
+                terminal[terminal.py<br />Terminal-based UI]
+
+                %% Core Components
+                agent[search_agent.py<br />Strands Agents]
+                tools[custom_tools.py<br />Custom Tools]
+                data[data.py<br />Pydantic Classes]
+
+                %% Logging Components
+                gradio_logging[gradio_logging.py<br />UI-based Logging]
+                basic_logging[basic_logging.py<br />Basic Logging]
+
+                %% Configuration & Environment
+                dotenv[.env<br />Environment Variables]
+
+
+                %% Gradio application dependencies
+                app --> gradio_logging
+                app --> agent
+
+                %% Terminal agent dependencies
+                terminal --> basic_logging
+                terminal --> agent
+
+                %% Agent dependencies
+                agent --> tools
+
+                %% Custom tools dependencies
+                tools --> data
+
+                %% Environment configuration
+                tools -.-> dotenv
+
+                %% Styling
+                classDef mainApp fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+                classDef agents fill:#4ecdc4,stroke:#333,stroke-width:2px,color:#fff
+                classDef tools fill:#45b7d1,stroke:#333,stroke-width:2px,color:#fff
+                classDef dataModel fill:#96ceb4,stroke:#333,stroke-width:2px,color:#fff
+                classDef logging fill:#feca57,stroke:#333,stroke-width:2px,color:#333
+                classDef config fill:#fd79a8,stroke:#333,stroke-width:2px,color:#fff
+                classDef external fill:#e17055,stroke:#333,stroke-width:2px,color:#fff
+                classDef terminals fill:#a29bfe,stroke:#333,stroke-width:2px,color:#fff
+                classDef documentation fill:#00b894,stroke:#333,stroke-width:2px,color:#fff
+
+                class app mainApp
+                class agent agents
+                class tools tools
+                class data dataModel
+                class gradio_logging,basic_logging logging
+                class requirements,dotenv,init config
+                class terminal terminals
+                class strands,aws,twelvelabs,gradio,dotenv_lib,opensearch,boto3,pydantic_lib external
+                class readme,chart documentation
+            </div>
+        </div>
+
+        <div class="legend">
+            <h3>File Categories Legend</h3>
+            <div class="legend-item">
+                <span class="color-box main-app"></span>
+                <strong>Gradio Application:</strong> Gradio-based conversational chatbot interface
+            </div>
+            <div class="legend-item">
+                <span class="color-box external"></span>
+                <strong>Terminal Interface:</strong> Terminal-based user interface
+            </div>
+            <div class="legend-item">
+                <span class="color-box tools"></span>
+                <strong>Custom Tools:</strong> Amazon Bedrock and OpenSearch integrations
+            </div>
+            <div class="legend-item">
+                <span class="color-box agents"></span>
+                <strong>Strands Agents:</strong> AI agents for various tasks
+            </div>
+            <div class="legend-item">
+                <span class="color-box data"></span>
+                <strong>Data Models:</strong> Pydantic classes for structured data
+            </div>
+            <div class="legend-item">
+                <span class="color-box logging"></span>
+                <strong>Logging:</strong> Logging implementations
+            </div>
+            <div class="legend-item">
+                <span class="color-box config"></span>
+                <strong>Configuration:</strong> Dependencies, environment variables, and package setup
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+
+</html>

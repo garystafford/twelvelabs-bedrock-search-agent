@@ -1,0 +1,13 @@
+boto3
+botocore
+gradio
+gradio_log
+mcp
+numpy
+opensearch-py
+pydantic
+strands-agents-builder
+strands-agents-tools
+twelvelabs
+strands-agents[ollama]
+# strands-agents-tools[agent_core_browser]
