@@ -1,6 +1,6 @@
 # TwelveLabs Video Search Agent
 
-Demonstration of a Video Search Agent build with [AWS Strands Agents](https://strandsagents.com/latest/), [TwelveLabs on Amazon Bedrock](https://aws.amazon.com/bedrock/twelvelabs/), [OpenSearch](https://opensearch.org/), and [Gradio](https://www.gradio.app/). See my full-length YouTube video, [Video Search Agent with TwelveLabs on Bedrock, Stands Agents, OpenSearch, and Gradio](https://youtu.be/ax6g1Y-6szA), for complete details on the project.
+Demonstration of a Video Search Agent build with [AWS Strands Agents](https://strandsagents.com/latest/), [TwelveLabs on Amazon Bedrock](https://aws.amazon.com/bedrock/twelvelabs/), [OpenSearch](https://opensearch.org/), and [Gradio](https://www.gradio.app/). See my full-length YouTube video, [Video Search Agent with TwelveLabs on Bedrock, Strands Agents, OpenSearch, and Gradio](https://youtu.be/ax6g1Y-6szA), for complete details on the project.
 
 ![previews/gradio_app.png](previews/gradio_app_v2.png)
 
