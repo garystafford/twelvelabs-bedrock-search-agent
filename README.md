@@ -187,10 +187,10 @@ GET tv-commercials-index/_search
 ```text
 DEMO: Tools
 -----------
-Describe all of the tools you have available
+Describe all of the tools you have available.
 
 
-DEMO: Strands Agents Tools
+DEMO: Strands Agents tools
 --------------------------
 What is the square root of the sum of the current year, month, and day?
 
@@ -203,11 +203,11 @@ Show your approach, including any commands you ran.
 
 DEMO: Simple search prompts
 ---------------------------
-Find commercials featuring superheroes
+Find commercials featuring superheroes.
 
-Find commercials with a food theme
+Find commercials with a food theme.
 
-Find commercials with a food theme featuring singing
+Find commercials with a food theme featuring singing.
 
 
 DEMO: Soft drinks
@@ -256,10 +256,6 @@ Write a Python method using the opensearch-py package to get the count of docume
 
 OTHER EXAMPLES
 --------------
-Please search for commercials that feature people driving in cars and provide a numbered list of the titles and durations in seconds, formatted as: '1. Title (duration).' List only the title and duration for each commercial, presented in the specified format without any markdown or additional formatting.
-
-Tell me more about commercial #1.
-
 Write HTML code to display the five segments, using the keyframe URL, title, and duration.
 
 Find commercials that feature fast food restaurants. Give me the top six scoring results. Write an HTML page to display the results in my Chrome browser on a Mac, and execute a shell command to open the page. The page should include a grid of results with the title, duration, and video preview using the keyframe URL.
