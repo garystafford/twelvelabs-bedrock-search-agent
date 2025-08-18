@@ -1,4 +1,4 @@
-# Reference: https://github.com/louis-she/gradio-log/blob/master/demo/app.py
+# Code Reference: https://github.com/louis-she/gradio-log/blob/master/demo/app.py
 
 import io
 import logging
@@ -72,7 +72,8 @@ class GradioLogger:
         ch.setLevel(logging.INFO)
         ch.setFormatter(formatter)
 
-        logger = logging.getLogger("gradio_log")
+        logger = logging.getLogger(__name__)
+        
         logger.setLevel(logging.INFO)
         for handler in logger.handlers:
             logger.removeHandler(handler)
