@@ -24,7 +24,7 @@ class BasicLogging:
         """
         logging.basicConfig(
             level=logging.INFO,
-            format="%(levelname)s | %(message)s",
+            format="", #"%(levelname)s | %(message)s",
             handlers=[logging.StreamHandler()],
         )
         logger = logging.getLogger(__name__)

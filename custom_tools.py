@@ -152,7 +152,7 @@ class CustomTools:
         )
         response = self.generate_text_embedding_bedrock(search_text)
         invocation_arn = response["invocationArn"]
-        self.logger.info(f"Invocation ARN: {invocation_arn}")
+        self.logger.info(f"Invocation ARN: {invocation_arn.split('/')[-1]}")
 
         # Poll the job status until it is completed
         response = self.poll_job_status(invocation_arn)

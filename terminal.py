@@ -41,8 +41,8 @@ while True:
         # Call the video search agent
         response = agent(user_input)
     except KeyboardInterrupt:
-        print(f"\n\n{RED}Execution interrupted. Exiting...{RESET}")
+        logger.fatal(f"\n\n{RED}Execution interrupted. Exiting...{RESET}")
         break
     except Exception as e:
-        print(f"\n{RED}An error occurred: {str(e)}{RESET}")
-        print(f"{RED}Please try a different request.{RESET}")
+        logger.error(f"\n{RED}An error occurred: {str(e)}{RESET}")
+        logger.error(f"{RED}Please try a different request.{RESET}")
