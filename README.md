@@ -1,6 +1,6 @@
 # TwelveLabs Video Search Agent
 
-Demonstration of an Video Search Agent build with AWS Strands Agents, TwelveLabs on Amazon Bedrock, OpenSearch, and Gradio.
+Demonstration of a Video Search Agent build with AWS Strands Agents, TwelveLabs on Amazon Bedrock, OpenSearch, and Gradio.
 
 ## Usage Instructions
 
@@ -14,14 +14,14 @@ Demonstration of an Video Search Agent build with AWS Strands Agents, TwelveLabs
 
 ### Installation
 
-Clone the repository:
+#### Clone GitHub repository
 
 ```bash
 git clone https://github.com/garystafford/twelvelabs-bedrock-search-agent.git
 cd twelvelabs-bedrock-search-agent
 ```
 
-Rename `python-dotenv` file:
+#### Prepare `python-dotenv` file
 
 Mac:
 
@@ -47,10 +47,9 @@ OPENSEARCH_INDEX_NAME=<Your OpenSearch Index Name>
 TL_API_KEY=<Your TwelveLabs API Key>
 
 BYPASS_TOOL_CONSENT=<Boolean Value>
-
 ```
 
-### Create a Python virtual environment and install required packages
+#### Create a Python virtual environment and install required packages
 
 Mac:
 
@@ -73,11 +72,17 @@ python -m pip install pip -Uq
 python -m pip install -r requirements.txt -Uq
 ```
 
-### AWS Credentials
+#### AWS Credentials
 
-Set AWS Credentials on the command line before continuing.
+Set AWS Credentials on the command line before continuing. These are required for access to Amazon Bedrock and Amazon S3.
 
-### Start Application
+#### Start Application
+
+There are three different front-ends in this project:
+
+- **Terminal**: Simple terminal interface for testing
+- **Chat**: Conversation interface using Gradio
+- **Web App**: Conversation chatbot interface using Gradio
 
 ```bash
 python terminal.py
@@ -85,7 +90,7 @@ python app_chat.py
 python app.py
 ```
 
-Access the Gradio in your web browser: [http://127.0.0.1:7860](http://127.0.0.1:7860).
+Access either of the Gradio apps in your web browser: [http://127.0.0.1:7860](http://127.0.0.1:7860).
 
 ## Alternative: Running OpenSearch in Docker
 
