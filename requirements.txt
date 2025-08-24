@@ -8,3 +8,5 @@ opensearch-py
 pydantic
 strands-agents-builder
 strands-agents-tools
+bedrock-agentcore
+strands-agents-tools[use_computer]
